@@ -1,0 +1,67 @@
+# === CORE DEPENDENCIES (alle Module) ===
+requests>=2.31.0           # HTTP-Client für APIs
+python-dotenv>=1.0.0       # Environment Variables
+urllib3>=1.26.0            # HTTP-Utilities
+pydantic>=2.4.0            # Data Validation
+typing-extensions>=4.8.0   # Type Hints
+
+# === ASYNC SUPPORT ===
+httpx>=0.25.0              # Async HTTP Client
+aiohttp>=3.8.0             # Alternative Async
+asyncio-throttle>=1.0.2    # Async Rate Limiting
+
+# === ERROR HANDLING & RELIABILITY ===
+tenacity>=8.2.0            # Retry-Mechanismen
+circuitbreaker>=1.4.0      # Circuit Breaker Pattern
+backoff>=2.2.0             # Backoff Strategies
+
+# === AI API CLIENTS ===
+openai>=1.3.0              # OpenAI GPT-4/3.5
+anthropic>=0.5.0           # Claude API
+google-generativeai>=0.3.0 # Gemini API
+cohere>=4.0.0              # Cohere API (optional)
+
+# === DATA HANDLING ===
+pandas>=2.1.0              # Data Analysis für Cost Tracking
+numpy>=1.24.0              # Numerische Operationen
+matplotlib>=3.7.0          # Visualisierung
+seaborn>=0.12.0            # Statistical Plots
+
+# === WEB & CONTENT ===
+beautifulsoup4>=4.12.0     # HTML Parsing
+scrapy>=2.10.0             # Web Scraping (für Content Module)
+jinja2>=3.1.0              # Template Engine
+
+# === DATABASE (für Analytics) ===
+sqlite3                    # Built-in (für lokale Daten)
+sqlalchemy>=2.0.0          # ORM (optional für größere Projekte)
+
+# === DEVELOPMENT TOOLS ===
+pytest>=7.4.0             # Testing Framework
+pytest-cov>=4.1.0         # Code Coverage
+pytest-asyncio>=0.21.0    # Async Testing
+black>=23.9.0              # Code Formatting
+flake8>=6.0.0              # Linting
+mypy>=1.6.0                # Type Checking
+pre-commit>=3.4.0          # Git Hooks
+
+# === DOCUMENTATION ===
+sphinx>=7.2.0              # Documentation Generator
+mkdocs>=1.5.0              # Alternative Documentation
+
+# === NOTEBOOK SUPPORT ===
+jupyter>=1.0.0             # Jupyter Notebooks
+ipykernel>=6.25.0          # Jupyter Kernel
+nbconvert>=7.8.0           # Notebook Conversion
+
+# === DEPLOYMENT & MONITORING ===
+gunicorn>=21.2.0           # WSGI Server
+fastapi>=0.103.0           # API Framework (für Web-Interfaces)
+uvicorn>=0.23.0            # ASGI Server
+prometheus-client>=0.17.0  # Monitoring
+
+# === UTILITIES ===
+rich>=13.6.0               # Beautiful Terminal Output
+click>=8.1.0               # Command Line Interfaces
+python-dateutil>=2.8.0    # Date Utilities
+pytz>=2023.3               # Timezone Support

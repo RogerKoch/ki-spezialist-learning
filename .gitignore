@@ -1,0 +1,162 @@
+# =================================
+# KI-SPEZIALIST LEARNING GITIGNORE
+# =================================
+
+# === KRITISCH: API KEYS & SECRETS ===
+.env
+*.env
+.env.*
+!.env.example
+api_keys.txt
+secrets.txt
+config.ini
+private/
+credentials/
+keys/
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# === VIRTUAL ENVIRONMENTS ===
+venv/
+env/
+ENV/
+.venv/
+.env/
+ki-spezialist-learning/
+
+# === IDE & EDITORS ===
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# === OPERATING SYSTEMS ===
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# === LOGS ===
+*.log
+logs/
+log/
+.log/
+
+# === TEMPORARY FILES ===
+*.tmp
+*.temp
+temp/
+tmp/
+.cache/
+.pytest_cache/
+
+# === JUPYTER NOTEBOOKS ===
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# === TESTING ===
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+
+# === DATA FILES (außer Samples) ===
+data/personal/
+data/real/
+data/production/
+data/backups/
+*.csv
+*.xlsx
+*.json
+!data/sample_data/
+!data/templates/
+
+# === MACHINE LEARNING ===
+models/
+*.pkl
+*.joblib
+*.h5
+*.model
+
+# === NODE.JS (falls später Web-Interface) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === DOCKER ===
+.dockerignore
+Dockerfile.local
+
+# === DOCUMENTATION BUILDS ===
+docs/_build/
+site/
+
+# === PROJECT SPECIFIC ===
+experiments/
+sandbox/
+playground/
+archived/
+old/
+backup/
