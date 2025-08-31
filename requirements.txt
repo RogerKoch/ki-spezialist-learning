@@ -1,67 +1,106 @@
-# === CORE DEPENDENCIES (alle Module) ===
-requests>=2.31.0           # HTTP-Client für APIs
-python-dotenv>=1.0.0       # Environment Variables
-urllib3>=1.26.0            # HTTP-Utilities
-pydantic>=2.4.0            # Data Validation
-typing-extensions>=4.8.0   # Type Hints
+# ======================================
+# KI-SPEZIALIST LEARNING - MINIMAL REQUIREMENTS
+# Python 3.13 Getestet - Nur funktionierende Pakete
+# ======================================
+
+# === CORE DEPENDENCIES (Essential) ===
+requests>=2.32.3           # HTTP-Client für APIs
+python-dotenv>=1.0.1       # Environment Variables
+urllib3>=2.2.1             # HTTP-Utilities
+typing-extensions>=4.12.2  # Extended Type Hints
 
 # === ASYNC SUPPORT ===
-httpx>=0.25.0              # Async HTTP Client
-aiohttp>=3.8.0             # Alternative Async
-asyncio-throttle>=1.0.2    # Async Rate Limiting
+httpx>=0.27.2              # Async HTTP Client
+aiohttp>=3.10.10           # Alternative Async
+anyio>=4.6.2               # Async abstraction layer
 
-# === ERROR HANDLING & RELIABILITY ===
-tenacity>=8.2.0            # Retry-Mechanismen
-circuitbreaker>=1.4.0      # Circuit Breaker Pattern
-backoff>=2.2.0             # Backoff Strategies
+# === ERROR HANDLING ===
+tenacity>=9.0.0            # Retry-Mechanismen
+backoff>=2.2.1             # Backoff Strategies
 
 # === AI API CLIENTS ===
-openai>=1.3.0              # OpenAI GPT-4/3.5
-anthropic>=0.5.0           # Claude API
-google-generativeai>=0.3.0 # Gemini API
-cohere>=4.0.0              # Cohere API (optional)
+openai>=1.54.4             # OpenAI GPT-4/3.5
+anthropic>=0.37.2          # Claude API
+google-generativeai>=0.8.3 # Gemini API
 
 # === DATA HANDLING ===
-pandas>=2.1.0              # Data Analysis für Cost Tracking
-numpy>=1.24.0              # Numerische Operationen
-matplotlib>=3.7.0          # Visualisierung
-seaborn>=0.12.0            # Statistical Plots
+pandas>=2.2.3              # Data Analysis
+numpy>=2.1.3               # Numerische Operationen
+matplotlib>=3.9.2          # Visualisierung
+
+# === JSON & SERIALIZATION ===
+orjson>=3.10.11            # Schnelle JSON-Verarbeitung
 
 # === WEB & CONTENT ===
-beautifulsoup4>=4.12.0     # HTML Parsing
-scrapy>=2.10.0             # Web Scraping (für Content Module)
-jinja2>=3.1.0              # Template Engine
+beautifulsoup4>=4.12.3     # HTML Parsing
+markupsafe>=3.0.2          # Template Sicherheit
 
-# === DATABASE (für Analytics) ===
-sqlite3                    # Built-in (für lokale Daten)
-sqlalchemy>=2.0.0          # ORM (optional für größere Projekte)
+# === CONFIGURATION ===
+pyyaml>=6.0.2              # YAML Configuration
+toml>=0.10.2               # TOML Configuration
 
-# === DEVELOPMENT TOOLS ===
-pytest>=7.4.0             # Testing Framework
-pytest-cov>=4.1.0         # Code Coverage
-pytest-asyncio>=0.21.0    # Async Testing
-black>=23.9.0              # Code Formatting
-flake8>=6.0.0              # Linting
-mypy>=1.6.0                # Type Checking
-pre-commit>=3.4.0          # Git Hooks
-
-# === DOCUMENTATION ===
-sphinx>=7.2.0              # Documentation Generator
-mkdocs>=1.5.0              # Alternative Documentation
-
-# === NOTEBOOK SUPPORT ===
-jupyter>=1.0.0             # Jupyter Notebooks
-ipykernel>=6.25.0          # Jupyter Kernel
-nbconvert>=7.8.0           # Notebook Conversion
-
-# === DEPLOYMENT & MONITORING ===
-gunicorn>=21.2.0           # WSGI Server
-fastapi>=0.103.0           # API Framework (für Web-Interfaces)
-uvicorn>=0.23.0            # ASGI Server
-prometheus-client>=0.17.0  # Monitoring
+# === DATABASE ===
+sqlalchemy>=2.0.43         # ORM
 
 # === UTILITIES ===
-rich>=13.6.0               # Beautiful Terminal Output
-click>=8.1.0               # Command Line Interfaces
-python-dateutil>=2.8.0    # Date Utilities
-pytz>=2023.3               # Timezone Support
+rich>=13.9.4               # Beautiful Terminal Output
+click>=8.1.7               # Command Line Interfaces
+python-dateutil>=2.9.0     # Date Utilities
+colorama>=0.4.6            # Cross-platform colored terminal
+
+# === DEVELOPMENT TOOLS ===
+pytest>=8.3.3             # Testing Framework
+pytest-cov>=6.0.0         # Code Coverage
+pytest-asyncio>=0.24.0    # Async Testing
+
+# === CODE QUALITY ===
+black>=24.10.0             # Code Formatting
+flake8>=7.1.1              # Linting
+mypy>=1.13.0               # Type Checking
+isort>=5.13.2              # Import Sorting
+
+# === API TESTING ===
+requests-mock>=1.12.1     # Mock HTTP requests
+responses>=0.25.3          # HTTP response mocking
+
+# === LOGGING ===
+structlog>=24.4.0          # Structured Logging
+
+# === SECURITY ===
+cryptography>=43.0.3       # Cryptographic utilities
+pyjwt>=2.9.0               # JWT tokens
+
+# === PERFORMANCE ===
+cachetools>=5.5.0          # Caching utilities
+
+# === FILE HANDLING ===
+watchdog>=6.0.0            # File system monitoring
+openpyxl>=3.1.5            # Excel file handling
+
+# === COMPRESSION ===
+brotli>=1.1.0              # Brotli compression
+
+# === DEVELOPMENT UTILITIES ===
+tqdm>=4.67.1               # Progress bars
+tabulate>=0.9.0            # Table formatting
+termcolor>=2.5.0           # Colored terminal output
+
+# ========================================
+# OPTIONALE PAKETE (Einzeln installieren bei Bedarf)
+# ========================================
+# Diese Pakete können Sie später einzeln installieren:
+# pip install jupyter ipykernel
+# pip install fastapi uvicorn
+# pip install seaborn
+# pip install pillow
+# pip install scikit-learn (wenn verfügbar für 3.13)
+
+# ENTFERNTE PAKETE (Python 3.13 Probleme):
+# - dynaconf (keine 3.3.0 Version für 3.13)
+# - environs (Kompatibilitätsprobleme)
+# - pendulum (verschiedene Dependency-Konflikte)
+# - lxml (Build-Probleme auf manchen Systemen)
+# - paramiko (Dependency-Konflikte)
+# - nltk, textblob (NLP-Pakete mit Problemen)
+# - memory-profiler (Version-Konflikte)
+# - pre-commit (kann später manuell installiert werden)
